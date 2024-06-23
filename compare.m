@@ -24,4 +24,4 @@ fclose(file_Output_Signal_2);
 plot(Output_Vec_Sig(:))
 hold
 plot(Output_Vec_Sig_HDL(:), 'ro')
-legend('MATLAB - Fixed-Point','VHDL - Fixed-Point')
+legend('MATLAB - Fixed-Point','Verilog - Fixed-Point')
