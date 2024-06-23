@@ -1,0 +1,641 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: filter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "filter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "filter"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : filter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\SHR\OneDrive\Documents\Verilog\FIR_PipeLine_ISE\filter_Pipeline.v" into library work
+Parsing module <filter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <filter>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <filter>.
+    Related source file is "C:\Users\SHR\OneDrive\Documents\Verilog\FIR_PipeLine_ISE\filter_Pipeline.v".
+        coeff1 = 10'sb1111101101
+        coeff2 = 10'sb1111111101
+        coeff3 = 10'sb0000001000
+        coeff4 = 10'sb1111111110
+        coeff5 = 10'sb0000001000
+        coeff6 = 10'sb0000110000
+        coeff7 = 10'sb0000011000
+        coeff8 = 10'sb1110101110
+        coeff9 = 10'sb1110011011
+        coeff10 = 10'sb0000101101
+        coeff11 = 10'sb0010010100
+        coeff12 = 10'sb0000101101
+        coeff13 = 10'sb1110011011
+        coeff14 = 10'sb1110101110
+        coeff15 = 10'sb0000011000
+        coeff16 = 10'sb0000110000
+        coeff17 = 10'sb0000001000
+        coeff18 = 10'sb1111111110
+        coeff19 = 10'sb0000001000
+        coeff20 = 10'sb1111111101
+        coeff21 = 10'sb1111101101
+    Found 294-bit register for signal <n0086[293:0]>.
+    Found 14-bit register for signal <filter_out>.
+    Found 24-bit register for signal <Product_pipe_1>.
+    Found 24-bit register for signal <Product_pipe_2>.
+    Found 24-bit register for signal <Product_pipe_3>.
+    Found 24-bit register for signal <Product_pipe_4>.
+    Found 24-bit register for signal <Product_pipe_5>.
+    Found 24-bit register for signal <Product_pipe_6>.
+    Found 24-bit register for signal <Product_pipe_7>.
+    Found 24-bit register for signal <Product_pipe_8>.
+    Found 24-bit register for signal <Product_pipe_9>.
+    Found 24-bit register for signal <Product_pipe_10>.
+    Found 24-bit register for signal <Product_pipe_11>.
+    Found 24-bit register for signal <Product_pipe_12>.
+    Found 24-bit register for signal <Product_pipe_13>.
+    Found 24-bit register for signal <Product_pipe_14>.
+    Found 24-bit register for signal <Product_pipe_15>.
+    Found 24-bit register for signal <Product_pipe_16>.
+    Found 24-bit register for signal <Product_pipe_17>.
+    Found 24-bit register for signal <Product_pipe_18>.
+    Found 24-bit register for signal <Product_pipe_19>.
+    Found 24-bit register for signal <Product_pipe_20>.
+    Found 24-bit register for signal <Adder_Tree_0>.
+    Found 24-bit register for signal <Adder_Tree_1>.
+    Found 24-bit register for signal <Adder_Tree_2>.
+    Found 24-bit register for signal <Adder_Tree_3>.
+    Found 24-bit register for signal <Adder_Tree_4>.
+    Found 24-bit register for signal <Adder_Tree_5>.
+    Found 24-bit register for signal <Adder_Tree_6>.
+    Found 24-bit register for signal <Adder_Tree_7>.
+    Found 24-bit register for signal <Adder_Tree_8>.
+    Found 24-bit register for signal <Adder_Tree_9>.
+    Found 24-bit register for signal <Adder_TreeB_0>.
+    Found 24-bit register for signal <Adder_TreeB_1>.
+    Found 24-bit register for signal <Adder_TreeB_2>.
+    Found 24-bit register for signal <Adder_TreeB_3>.
+    Found 24-bit register for signal <Adder_TreeB_4>.
+    Found 24-bit register for signal <Adder_TreeC_0>.
+    Found 24-bit register for signal <Adder_TreeC_1>.
+    Found 24-bit register for signal <Adder_TreeD_0>.
+    Found 14-bit register for signal <output_staged>.
+    Found 24-bit register for signal <Product_pipe_0>.
+    Found 24-bit adder for signal <Product_pipe_0[23]_Product_pipe_1[23]_add_18_OUT> created at line 232.
+    Found 24-bit adder for signal <Product_pipe_2[23]_Product_pipe_3[23]_add_19_OUT> created at line 233.
+    Found 24-bit adder for signal <Product_pipe_4[23]_Product_pipe_5[23]_add_20_OUT> created at line 234.
+    Found 24-bit adder for signal <Product_pipe_6[23]_Product_pipe_7[23]_add_21_OUT> created at line 235.
+    Found 24-bit adder for signal <Product_pipe_8[23]_Product_pipe_9[23]_add_22_OUT> created at line 236.
+    Found 24-bit adder for signal <Product_pipe_10[23]_Product_pipe_11[23]_add_23_OUT> created at line 237.
+    Found 24-bit adder for signal <Product_pipe_12[23]_Product_pipe_13[23]_add_24_OUT> created at line 238.
+    Found 24-bit adder for signal <Product_pipe_14[23]_Product_pipe_15[23]_add_25_OUT> created at line 239.
+    Found 24-bit adder for signal <Product_pipe_16[23]_Product_pipe_17[23]_add_26_OUT> created at line 240.
+    Found 24-bit adder for signal <n0225> created at line 241.
+    Found 24-bit adder for signal <Product_pipe_18[23]_Product_pipe_20[23]_add_28_OUT> created at line 241.
+    Found 24-bit adder for signal <Adder_Tree_0[23]_Adder_Tree_1[23]_add_29_OUT> created at line 243.
+    Found 24-bit adder for signal <Adder_Tree_2[23]_Adder_Tree_3[23]_add_30_OUT> created at line 244.
+    Found 24-bit adder for signal <Adder_Tree_4[23]_Adder_Tree_5[23]_add_31_OUT> created at line 245.
+    Found 24-bit adder for signal <Adder_Tree_6[23]_Adder_Tree_7[23]_add_32_OUT> created at line 246.
+    Found 24-bit adder for signal <Adder_Tree_8[23]_Adder_Tree_9[23]_add_33_OUT> created at line 247.
+    Found 24-bit adder for signal <Adder_TreeB_0[23]_Adder_TreeB_1[23]_add_34_OUT> created at line 249.
+    Found 24-bit adder for signal <n0249> created at line 250.
+    Found 24-bit adder for signal <Adder_TreeB_2[23]_Adder_TreeB_4[23]_add_36_OUT> created at line 250.
+    Found 24-bit adder for signal <Adder_TreeC_0[23]_Adder_TreeC_1[23]_add_37_OUT> created at line 252.
+    Found 23-bit subtractor for signal <delay_pipeline[3][13]_unary_minus_4_OUT<22:0>> created at line 0.
+    Found 23-bit subtractor for signal <delay_pipeline[17][13]_unary_minus_16_OUT<22:0>> created at line 0.
+    Found 14x6-bit multiplier for signal <delay_pipeline[0][13]_PWR_1_o_MuLt_1_OUT> created at line 209.
+    Found 14x3-bit multiplier for signal <delay_pipeline[1][13]_PWR_1_o_MuLt_2_OUT> created at line 210.
+    Found 14x7-bit multiplier for signal <delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT> created at line 214.
+    Found 14x6-bit multiplier for signal <delay_pipeline[6][13]_GND_1_o_MuLt_5_OUT> created at line 215.
+    Found 14x8-bit multiplier for signal <delay_pipeline[7][13]_PWR_1_o_MuLt_6_OUT> created at line 216.
+    Found 14x8-bit multiplier for signal <delay_pipeline[8][13]_PWR_1_o_MuLt_7_OUT> created at line 217.
+    Found 14x7-bit multiplier for signal <delay_pipeline[9][13]_GND_1_o_MuLt_8_OUT> created at line 218.
+    Found 14x9-bit multiplier for signal <delay_pipeline[10][13]_GND_1_o_MuLt_9_OUT> created at line 219.
+    Found 14x7-bit multiplier for signal <delay_pipeline[11][13]_GND_1_o_MuLt_10_OUT> created at line 220.
+    Found 14x8-bit multiplier for signal <delay_pipeline[12][13]_PWR_1_o_MuLt_11_OUT> created at line 221.
+    Found 14x8-bit multiplier for signal <delay_pipeline[13][13]_PWR_1_o_MuLt_12_OUT> created at line 222.
+    Found 14x6-bit multiplier for signal <delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT> created at line 223.
+    Found 14x7-bit multiplier for signal <delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT> created at line 224.
+    Found 14x3-bit multiplier for signal <delay_pipeline[19][13]_PWR_1_o_MuLt_16_OUT> created at line 228.
+    Found 14x6-bit multiplier for signal <delay_pipeline[20][13]_PWR_1_o_MuLt_17_OUT> created at line 229.
+    Summary:
+	inferred  15 Multiplier(s).
+	inferred  22 Adder/Subtractor(s).
+	inferred 1258 D-type flip-flop(s).
+Unit <filter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 15
+ 14x3-bit multiplier                                   : 2
+ 14x6-bit multiplier                                   : 4
+ 14x7-bit multiplier                                   : 4
+ 14x8-bit multiplier                                   : 4
+ 14x9-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 22
+ 23-bit subtractor                                     : 2
+ 24-bit adder                                          : 20
+# Registers                                            : 42
+ 14-bit register                                       : 2
+ 24-bit register                                       : 39
+ 294-bit register                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <Product_pipe_2_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_2_1> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_2_2> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_4_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_4_1> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_4_2> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_18_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_18_1> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_18_2> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_16_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_16_1> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_16_2> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_3_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_17_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_0> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_1> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_2> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_3> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_4> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_5> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_6> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_7> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_8> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_23> of sequential type is unconnected in block <filter>.
+
+Synthesizing (advanced) Unit <filter>.
+	Multiplier <Mmult_delay_pipeline[20][13]_PWR_1_o_MuLt_17_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_18[23]_Product_pipe_20[23]_add_28_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[20][13]_PWR_1_o_MuLt_17_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_20> in block <filter>, <Adder_Tree_9> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[0][13]_PWR_1_o_MuLt_1_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_0[23]_Product_pipe_1[23]_add_18_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[0][13]_PWR_1_o_MuLt_1_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_0> in block <filter>, <Adder_Tree_0> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_4[23]_Product_pipe_5[23]_add_20_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_5> in block <filter>, <Adder_Tree_2> in block <filter>, <Product_pipe_4> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[8][13]_PWR_1_o_MuLt_7_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_8[23]_Product_pipe_9[23]_add_22_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[8][13]_PWR_1_o_MuLt_7_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_8> in block <filter>, <Adder_Tree_4> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[6][13]_GND_1_o_MuLt_5_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_6[23]_Product_pipe_7[23]_add_21_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[6][13]_GND_1_o_MuLt_5_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_6> in block <filter>, <Adder_Tree_3> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[10][13]_GND_1_o_MuLt_9_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_10[23]_Product_pipe_11[23]_add_23_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[10][13]_GND_1_o_MuLt_9_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_10> in block <filter>, <Adder_Tree_5> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[12][13]_PWR_1_o_MuLt_11_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_12[23]_Product_pipe_13[23]_add_24_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[12][13]_PWR_1_o_MuLt_11_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_12> in block <filter>, <Adder_Tree_6> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT> in block <filter> and adder/subtractor <Madd_Product_pipe_14[23]_Product_pipe_15[23]_add_25_OUT> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_14> in block <filter>, <Adder_Tree_7> in block <filter>.
+	Multiplier <Mmult_delay_pipeline[19][13]_PWR_1_o_MuLt_16_OUT> in block <filter> and adder/subtractor <Madd_n0225> in block <filter> are combined into a MAC<Maddsub_delay_pipeline[19][13]_PWR_1_o_MuLt_16_OUT>.
+	The following registers are also absorbed by the MAC: <Product_pipe_19> in block <filter>, <Product_pipe_18> in block <filter>.
+	Found pipelined multiplier on signal <delay_pipeline[1][13]_PWR_1_o_MuLt_2_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <delay_pipeline[9][13]_GND_1_o_MuLt_8_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <delay_pipeline[7][13]_PWR_1_o_MuLt_6_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <delay_pipeline[11][13]_GND_1_o_MuLt_10_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <delay_pipeline[13][13]_PWR_1_o_MuLt_12_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_delay_pipeline[9][13]_GND_1_o_MuLt_8_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_delay_pipeline[7][13]_PWR_1_o_MuLt_6_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_delay_pipeline[11][13]_GND_1_o_MuLt_10_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_delay_pipeline[13][13]_PWR_1_o_MuLt_12_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT by adding 1 register level(s).
+Unit <filter> synthesized (advanced).
+WARNING:Xst:2677 - Node <Adder_TreeD_0_0> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_1> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_2> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_3> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_4> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_5> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_6> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_7> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_8> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeD_0_23> of sequential type is unconnected in block <filter>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 9
+ 14x3-to-24-bit MAC                                    : 1
+ 14x6-to-24-bit MAC                                    : 4
+ 14x7-to-24-bit MAC                                    : 1
+ 14x8-to-24-bit MAC                                    : 2
+ 14x9-to-24-bit MAC                                    : 1
+# Multipliers                                          : 6
+ 14x3-bit registered multiplier                        : 1
+ 14x7-bit registered multiplier                        : 3
+ 14x8-bit registered multiplier                        : 2
+# Adders/Subtractors                                   : 13
+ 23-bit subtractor                                     : 2
+ 24-bit adder                                          : 11
+# Registers                                            : 648
+ Flip-Flops                                            : 648
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Product_pipe_16_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_16_1> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_16_2> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_2_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_2_1> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_2_2> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_3_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Product_pipe_17_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Product_pipe_2_16> in Unit <filter> is equivalent to the following 7 FFs/Latches, which will be removed : <Product_pipe_2_17> <Product_pipe_2_18> <Product_pipe_2_19> <Product_pipe_2_20> <Product_pipe_2_21> <Product_pipe_2_22> <Product_pipe_2_23> 
+INFO:Xst:2261 - The FF/Latch <Product_pipe_16_16> in Unit <filter> is equivalent to the following 7 FFs/Latches, which will be removed : <Product_pipe_16_17> <Product_pipe_16_18> <Product_pipe_16_19> <Product_pipe_16_20> <Product_pipe_16_21> <Product_pipe_16_22> <Product_pipe_16_23> 
+WARNING:Xst:1710 - FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT_17> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT_18> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT_19> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT_20> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT_17> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT_18> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT_19> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT_20> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT_17> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT_18> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT_19> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT1_14> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Adder_Tree_1_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Adder_Tree_8_0> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_21> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_22> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_23> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_21> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_22> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_23> (without init value) has a constant value of 0 in block <filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Adder_TreeB_1_23> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeB_0_23> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeC_0_23> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Adder_TreeC_1_23> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_0> of sequential type is unconnected in block <filter>.
+INFO:Xst:2261 - The FF/Latch <Product_pipe_17_15> in Unit <filter> is equivalent to the following 8 FFs/Latches, which will be removed : <Product_pipe_17_16> <Product_pipe_17_17> <Product_pipe_17_18> <Product_pipe_17_19> <Product_pipe_17_20> <Product_pipe_17_21> <Product_pipe_17_22> <Product_pipe_17_23> 
+INFO:Xst:2261 - The FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT_1> in Unit <filter> is equivalent to the following FF/Latch, which will be removed : <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT_0> 
+INFO:Xst:2261 - The FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT_1> in Unit <filter> is equivalent to the following FF/Latch, which will be removed : <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT_0> 
+INFO:Xst:2261 - The FF/Latch <Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT_1> in Unit <filter> is equivalent to the following FF/Latch, which will be removed : <Mmult_delay_pipeline[15][13]_GND_1_o_MuLt_14_OUT_0> 
+INFO:Xst:2261 - The FF/Latch <Product_pipe_3_15> in Unit <filter> is equivalent to the following 8 FFs/Latches, which will be removed : <Product_pipe_3_16> <Product_pipe_3_17> <Product_pipe_3_18> <Product_pipe_3_19> <Product_pipe_3_20> <Product_pipe_3_21> <Product_pipe_3_22> <Product_pipe_3_23> 
+INFO:Xst:2261 - The FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_2> in Unit <filter> is equivalent to the following 2 FFs/Latches, which will be removed : <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_1> <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_0> 
+INFO:Xst:2261 - The FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_2> in Unit <filter> is equivalent to the following FF/Latch, which will be removed : <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_1> 
+
+Optimizing unit <filter> ...
+INFO:Xst:2261 - The FF/Latch <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_3> in Unit <filter> is equivalent to the following FF/Latch, which will be removed : <Maddsub_delay_pipeline[14][13]_GND_1_o_MuLt_13_OUT1_2> 
+INFO:Xst:2261 - The FF/Latch <Adder_Tree_1_17> in Unit <filter> is equivalent to the following 6 FFs/Latches, which will be removed : <Adder_Tree_1_18> <Adder_Tree_1_19> <Adder_Tree_1_20> <Adder_Tree_1_21> <Adder_Tree_1_22> <Adder_Tree_1_23> 
+INFO:Xst:2261 - The FF/Latch <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_4> in Unit <filter> is equivalent to the following 2 FFs/Latches, which will be removed : <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_3> <Maddsub_delay_pipeline[5][13]_GND_1_o_MuLt_4_OUT2_2> 
+INFO:Xst:2261 - The FF/Latch <Adder_Tree_8_17> in Unit <filter> is equivalent to the following 6 FFs/Latches, which will be removed : <Adder_Tree_8_18> <Adder_Tree_8_19> <Adder_Tree_8_20> <Adder_Tree_8_21> <Adder_Tree_8_22> <Adder_Tree_8_23> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block filter, actual ratio is 13.
+
+Final Macro Processing ...
+
+Processing Unit <filter> :
+	Found 2-bit shift register for signal <Adder_Tree_8_1>.
+	Found 2-bit shift register for signal <Adder_Tree_8_2>.
+	Found 2-bit shift register for signal <Adder_Tree_1_1>.
+	Found 2-bit shift register for signal <Adder_Tree_1_2>.
+	Found 2-bit shift register for signal <output_staged_0>.
+	Found 2-bit shift register for signal <output_staged_1>.
+	Found 2-bit shift register for signal <output_staged_2>.
+	Found 2-bit shift register for signal <output_staged_3>.
+	Found 2-bit shift register for signal <output_staged_4>.
+	Found 2-bit shift register for signal <output_staged_5>.
+	Found 2-bit shift register for signal <output_staged_6>.
+	Found 2-bit shift register for signal <output_staged_7>.
+	Found 2-bit shift register for signal <output_staged_8>.
+	Found 2-bit shift register for signal <output_staged_9>.
+	Found 2-bit shift register for signal <output_staged_10>.
+	Found 2-bit shift register for signal <output_staged_11>.
+	Found 2-bit shift register for signal <output_staged_12>.
+	Found 2-bit shift register for signal <output_staged_13>.
+Unit <filter> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 558
+ Flip-Flops                                            : 558
+# Shift Registers                                      : 18
+ 2-bit shift register                                  : 18
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : filter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 687
+#      GND                         : 1
+#      INV                         : 30
+#      LUT1                        : 4
+#      LUT2                        : 168
+#      LUT3                        : 30
+#      LUT4                        : 24
+#      MUXCY                       : 212
+#      VCC                         : 1
+#      XORCY                       : 217
+# FlipFlops/Latches                : 562
+#      FD                          : 250
+#      FDCE                        : 308
+#      FDE                         : 4
+# Shift Registers                  : 18
+#      SRLC16E                     : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 16
+#      OBUF                        : 14
+# DSPs                             : 16
+#      DSP48A1                     : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             562  out of  11440     4%  
+ Number of Slice LUTs:                  274  out of   5720     4%  
+    Number used as Logic:               256  out of   5720     4%  
+    Number used as Memory:               18  out of   1440     1%  
+       Number used as SRL:               18
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    608
+   Number with an unused Flip Flop:      46  out of    608     7%  
+   Number with an unused LUT:           334  out of    608    54%  
+   Number of fully used LUT-FF pairs:   228  out of    608    37%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of    102    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                     16  out of     16   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 596   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.077ns (Maximum Frequency: 164.555MHz)
+   Minimum input arrival time before clock: 4.224ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.077ns (frequency: 164.555MHz)
+  Total number of paths / destination ports: 8556 / 1374
+-------------------------------------------------------------------------
+Delay:               6.077ns (Levels of Logic = 0)
+  Source:            delay_pipeline_20_195 (FF)
+  Destination:       Mmult_delay_pipeline[7][13]_PWR_1_o_MuLt_6_OUT (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: delay_pipeline_20_195 to Mmult_delay_pipeline[7][13]_PWR_1_o_MuLt_6_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.525   0.875  delay_pipeline_20_195 (delay_pipeline_20_195)
+     DSP48A1:B13               4.677          Mmult_delay_pipeline[7][13]_PWR_1_o_MuLt_6_OUT
+    ----------------------------------------
+    Total                      6.077ns (5.202ns logic, 0.875ns route)
+                                       (85.6% logic, 14.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 630 / 630
+-------------------------------------------------------------------------
+Offset:              4.224ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       delay_pipeline_20_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to delay_pipeline_20_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           308   1.328   2.437  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.459          delay_pipeline_20_0
+    ----------------------------------------
+    Total                      4.224ns (1.787ns logic, 2.437ns route)
+                                       (42.3% logic, 57.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            output_register_13 (FF)
+  Destination:       filter_out<13> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: output_register_13 to filter_out<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.525   0.681  output_register_13 (output_register_13)
+     OBUF:I->O                 2.912          filter_out_13_OBUF (filter_out<13>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.077|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.50 secs
+ 
+--> 
+
+Total memory usage is 4506276 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

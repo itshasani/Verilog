@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/xst"
+elaborate
+-ifn filter.prj
+-ifmt mixed

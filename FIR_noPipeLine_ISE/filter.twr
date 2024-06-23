@@ -1,0 +1,1556 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+I:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml filter.twx filter.ncd -o filter.twr filter.pcf -ucf
+XDC1.ucf
+
+Design file:              filter.ncd
+Physical constraint file: filter.pcf
+Device,package,speed:     xc3s400,pq208,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6622209029756681 paths analyzed, 316 endpoints analyzed, 36 failing endpoints
+ 36 timing errors detected. (36 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  62.393ns.
+--------------------------------------------------------------------------------
+
+Paths for end point output_register_13 (SLICE_X54Y59.CIN), 1625888050421659 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.393ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_0 (FF)
+  Destination:          output_register_13 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.393ns (Levels of Logic = 34)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_0 to output_register_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.YQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_0
+    MULT18X18_X0Y1.A0    net (fanout=2)        1.242   delay_pipeline_0_0
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.COUT    Topcyg                1.096   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.X       Tcinx                 0.904   add_temp_13<14>
+                                                       Madd_add_temp_13_Madd_xor<14>
+    SLICE_X47Y47.F1      net (fanout=1)        0.552   add_temp_13<14>
+    SLICE_X47Y47.X       Topx                  0.966   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_lut<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.COUT    Tbyp                  0.120   output_register<11>
+                                                       Madd_output_typeconvert_add0000_cy<20>
+                                                       Madd_output_typeconvert_add0000_cy<21>
+    SLICE_X54Y59.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<21>
+    SLICE_X54Y59.CLK     Tcinck                0.986   output_register<13>
+                                                       Madd_output_typeconvert_add0000_xor<22>
+                                                       output_register_13
+    -------------------------------------------------  ---------------------------
+    Total                                     62.393ns (38.382ns logic, 24.011ns route)
+                                                       (61.5% logic, 38.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.388ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_0 (FF)
+  Destination:          output_register_13 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.388ns (Levels of Logic = 34)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_0 to output_register_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.YQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_0
+    MULT18X18_X0Y1.A0    net (fanout=2)        1.242   delay_pipeline_0_0
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.Y       Topgy                 1.230   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_xor<13>
+    SLICE_X47Y46.G1      net (fanout=1)        0.340   add_temp_13<13>
+    SLICE_X47Y46.COUT    Topcyg                1.039   add_temp_14<12>
+                                                       Madd_add_temp_14_Madd_lut<13>
+                                                       Madd_add_temp_14_Madd_cy<13>
+    SLICE_X47Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_14_Madd_cy<13>
+    SLICE_X47Y47.X       Tcinx                 0.904   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.COUT    Tbyp                  0.120   output_register<11>
+                                                       Madd_output_typeconvert_add0000_cy<20>
+                                                       Madd_output_typeconvert_add0000_cy<21>
+    SLICE_X54Y59.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<21>
+    SLICE_X54Y59.CLK     Tcinck                0.986   output_register<13>
+                                                       Madd_output_typeconvert_add0000_xor<22>
+                                                       output_register_13
+    -------------------------------------------------  ---------------------------
+    Total                                     62.388ns (38.589ns logic, 23.799ns route)
+                                                       (61.9% logic, 38.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.383ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_1 (FF)
+  Destination:          output_register_13 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.383ns (Levels of Logic = 34)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_1 to output_register_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.XQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_1
+    MULT18X18_X0Y1.A1    net (fanout=2)        1.232   delay_pipeline_0_1
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.COUT    Topcyg                1.096   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.X       Tcinx                 0.904   add_temp_13<14>
+                                                       Madd_add_temp_13_Madd_xor<14>
+    SLICE_X47Y47.F1      net (fanout=1)        0.552   add_temp_13<14>
+    SLICE_X47Y47.X       Topx                  0.966   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_lut<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.COUT    Tbyp                  0.120   output_register<11>
+                                                       Madd_output_typeconvert_add0000_cy<20>
+                                                       Madd_output_typeconvert_add0000_cy<21>
+    SLICE_X54Y59.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<21>
+    SLICE_X54Y59.CLK     Tcinck                0.986   output_register<13>
+                                                       Madd_output_typeconvert_add0000_xor<22>
+                                                       output_register_13
+    -------------------------------------------------  ---------------------------
+    Total                                     62.383ns (38.382ns logic, 24.001ns route)
+                                                       (61.5% logic, 38.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point output_register_12 (SLICE_X54Y58.CIN), 248469139898970 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.292ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_0 (FF)
+  Destination:          output_register_12 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.292ns (Levels of Logic = 33)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_0 to output_register_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.YQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_0
+    MULT18X18_X0Y1.A0    net (fanout=2)        1.242   delay_pipeline_0_0
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.COUT    Topcyg                1.096   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.X       Tcinx                 0.904   add_temp_13<14>
+                                                       Madd_add_temp_13_Madd_xor<14>
+    SLICE_X47Y47.F1      net (fanout=1)        0.552   add_temp_13<14>
+    SLICE_X47Y47.X       Topx                  0.966   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_lut<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CLK     Tcinck                1.005   output_register<11>
+                                                       Madd_output_typeconvert_add0000_cy<20>
+                                                       Madd_output_typeconvert_add0000_xor<21>
+                                                       output_register_12
+    -------------------------------------------------  ---------------------------
+    Total                                     62.292ns (38.281ns logic, 24.011ns route)
+                                                       (61.5% logic, 38.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.287ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_0 (FF)
+  Destination:          output_register_12 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.287ns (Levels of Logic = 33)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_0 to output_register_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.YQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_0
+    MULT18X18_X0Y1.A0    net (fanout=2)        1.242   delay_pipeline_0_0
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.Y       Topgy                 1.230   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_xor<13>
+    SLICE_X47Y46.G1      net (fanout=1)        0.340   add_temp_13<13>
+    SLICE_X47Y46.COUT    Topcyg                1.039   add_temp_14<12>
+                                                       Madd_add_temp_14_Madd_lut<13>
+                                                       Madd_add_temp_14_Madd_cy<13>
+    SLICE_X47Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_14_Madd_cy<13>
+    SLICE_X47Y47.X       Tcinx                 0.904   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CLK     Tcinck                1.005   output_register<11>
+                                                       Madd_output_typeconvert_add0000_cy<20>
+                                                       Madd_output_typeconvert_add0000_xor<21>
+                                                       output_register_12
+    -------------------------------------------------  ---------------------------
+    Total                                     62.287ns (38.488ns logic, 23.799ns route)
+                                                       (61.8% logic, 38.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.282ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_1 (FF)
+  Destination:          output_register_12 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.282ns (Levels of Logic = 33)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_1 to output_register_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.XQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_1
+    MULT18X18_X0Y1.A1    net (fanout=2)        1.232   delay_pipeline_0_1
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.COUT    Topcyg                1.096   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.X       Tcinx                 0.904   add_temp_13<14>
+                                                       Madd_add_temp_13_Madd_xor<14>
+    SLICE_X47Y47.F1      net (fanout=1)        0.552   add_temp_13<14>
+    SLICE_X47Y47.X       Topx                  0.966   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_lut<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CLK     Tcinck                1.005   output_register<11>
+                                                       Madd_output_typeconvert_add0000_cy<20>
+                                                       Madd_output_typeconvert_add0000_xor<21>
+                                                       output_register_12
+    -------------------------------------------------  ---------------------------
+    Total                                     62.282ns (38.281ns logic, 24.001ns route)
+                                                       (61.5% logic, 38.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point output_register_11 (SLICE_X54Y58.CIN), 248469139898970 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.273ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_0 (FF)
+  Destination:          output_register_11 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.273ns (Levels of Logic = 33)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_0 to output_register_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.YQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_0
+    MULT18X18_X0Y1.A0    net (fanout=2)        1.242   delay_pipeline_0_0
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.COUT    Topcyg                1.096   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.X       Tcinx                 0.904   add_temp_13<14>
+                                                       Madd_add_temp_13_Madd_xor<14>
+    SLICE_X47Y47.F1      net (fanout=1)        0.552   add_temp_13<14>
+    SLICE_X47Y47.X       Topx                  0.966   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_lut<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CLK     Tcinck                0.986   output_register<11>
+                                                       Madd_output_typeconvert_add0000_xor<20>
+                                                       output_register_11
+    -------------------------------------------------  ---------------------------
+    Total                                     62.273ns (38.262ns logic, 24.011ns route)
+                                                       (61.4% logic, 38.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_0 (FF)
+  Destination:          output_register_11 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.268ns (Levels of Logic = 33)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_0 to output_register_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.YQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_0
+    MULT18X18_X0Y1.A0    net (fanout=2)        1.242   delay_pipeline_0_0
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.Y       Topgy                 1.230   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_xor<13>
+    SLICE_X47Y46.G1      net (fanout=1)        0.340   add_temp_13<13>
+    SLICE_X47Y46.COUT    Topcyg                1.039   add_temp_14<12>
+                                                       Madd_add_temp_14_Madd_lut<13>
+                                                       Madd_add_temp_14_Madd_cy<13>
+    SLICE_X47Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_14_Madd_cy<13>
+    SLICE_X47Y47.X       Tcinx                 0.904   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CLK     Tcinck                0.986   output_register<11>
+                                                       Madd_output_typeconvert_add0000_xor<20>
+                                                       output_register_11
+    -------------------------------------------------  ---------------------------
+    Total                                     62.268ns (38.469ns logic, 23.799ns route)
+                                                       (61.8% logic, 38.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -52.263ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               delay_pipeline_0_1 (FF)
+  Destination:          output_register_11 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      62.263ns (Levels of Logic = 33)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: delay_pipeline_0_1 to output_register_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y20.XQ       Tcko                  0.720   delay_pipeline_0_1
+                                                       delay_pipeline_0_1
+    MULT18X18_X0Y1.A1    net (fanout=2)        1.232   delay_pipeline_0_1
+    MULT18X18_X0Y1.P3    Tmult                 2.146   Mmult_product1_mult0000
+                                                       Mmult_product1_mult0000
+    SLICE_X6Y21.G2       net (fanout=1)        2.147   product1<3>
+    SLICE_X6Y21.COUT     Topcyg                1.096   add_temp<2>
+                                                       Madd_add_temp_Madd_lut<3>
+                                                       Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.CIN      net (fanout=1)        0.000   Madd_add_temp_Madd_cy<3>
+    SLICE_X6Y22.X        Tcinx                 0.904   add_temp<4>
+                                                       Madd_add_temp_Madd_xor<4>
+    SLICE_X9Y46.G1       net (fanout=1)        2.355   add_temp<4>
+    SLICE_X9Y46.COUT     Topcyg                1.039   add_temp_1<3>
+                                                       Madd_add_temp_1_Madd_lut<4>
+                                                       Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.CIN      net (fanout=1)        0.000   Madd_add_temp_1_Madd_cy<4>
+    SLICE_X9Y47.X        Tcinx                 0.904   add_temp_1<5>
+                                                       Madd_add_temp_1_Madd_xor<5>
+    SLICE_X8Y48.F2       net (fanout=1)        0.512   add_temp_1<5>
+    SLICE_X8Y48.Y        Topy                  1.662   add_temp_2<5>
+                                                       Madd_add_temp_2_Madd_lut<5>
+                                                       Madd_add_temp_2_Madd_cy<5>
+                                                       Madd_add_temp_2_Madd_xor<6>
+    SLICE_X10Y47.G2      net (fanout=1)        0.948   add_temp_2<6>
+    SLICE_X10Y47.COUT    Topcyg                1.096   add_temp_3<5>
+                                                       Madd_add_temp_3_Madd_lut<6>
+                                                       Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_3_Madd_cy<6>
+    SLICE_X10Y48.X       Tcinx                 0.904   add_temp_3<7>
+                                                       Madd_add_temp_3_Madd_xor<7>
+    SLICE_X12Y47.G1      net (fanout=1)        0.580   add_temp_3<7>
+    SLICE_X12Y47.COUT    Topcyg                1.096   add_temp_4<6>
+                                                       Madd_add_temp_4_Madd_lut<7>
+                                                       Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.CIN     net (fanout=1)        0.000   Madd_add_temp_4_Madd_cy<7>
+    SLICE_X12Y48.X       Tcinx                 0.904   add_temp_4<8>
+                                                       Madd_add_temp_4_Madd_xor<8>
+    SLICE_X14Y46.F2      net (fanout=1)        1.216   add_temp_4<8>
+    SLICE_X14Y46.X       Topx                  1.023   add_temp_5<8>
+                                                       Madd_add_temp_5_Madd_lut<8>
+                                                       Madd_add_temp_5_Madd_xor<8>
+    SLICE_X16Y48.F2      net (fanout=1)        1.539   add_temp_5<8>
+    SLICE_X16Y48.X       Topx                  1.023   add_temp_6<8>
+                                                       Madd_add_temp_6_Madd_lut<8>
+                                                       Madd_add_temp_6_Madd_xor<8>
+    SLICE_X18Y46.F1      net (fanout=1)        0.916   add_temp_6<8>
+    SLICE_X18Y46.Y       Topy                  1.662   add_temp_7<8>
+                                                       Madd_add_temp_7_Madd_lut<8>
+                                                       Madd_add_temp_7_Madd_cy<8>
+                                                       Madd_add_temp_7_Madd_xor<9>
+    SLICE_X19Y46.G1      net (fanout=1)        0.340   add_temp_7<9>
+    SLICE_X19Y46.COUT    Topcyg                1.039   add_temp_8<8>
+                                                       Madd_add_temp_8_Madd_lut<9>
+                                                       Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_8_Madd_cy<9>
+    SLICE_X19Y47.X       Tcinx                 0.904   add_temp_8<10>
+                                                       Madd_add_temp_8_Madd_xor<10>
+    SLICE_X17Y45.F1      net (fanout=1)        0.896   add_temp_8<10>
+    SLICE_X17Y45.Y       Topy                  1.605   add_temp_9<10>
+                                                       Madd_add_temp_9_Madd_lut<10>
+                                                       Madd_add_temp_9_Madd_cy<10>
+                                                       Madd_add_temp_9_Madd_xor<11>
+    SLICE_X43Y45.G2      net (fanout=1)        1.772   add_temp_9<11>
+    SLICE_X43Y45.Y       Topgy                 1.173   add_temp_10<10>
+                                                       Madd_add_temp_10_Madd_lut<11>
+                                                       Madd_add_temp_10_Madd_xor<11>
+    SLICE_X44Y45.G2      net (fanout=1)        0.954   add_temp_10<11>
+    SLICE_X44Y45.COUT    Topcyg                1.096   add_temp_11<10>
+                                                       Madd_add_temp_11_Madd_lut<11>
+                                                       Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.CIN     net (fanout=1)        0.000   Madd_add_temp_11_Madd_cy<11>
+    SLICE_X44Y46.X       Tcinx                 0.904   add_temp_11<12>
+                                                       Madd_add_temp_11_Madd_xor<12>
+    SLICE_X45Y46.F1      net (fanout=1)        0.552   add_temp_11<12>
+    SLICE_X45Y46.Y       Topy                  1.605   add_temp_12<12>
+                                                       Madd_add_temp_12_Madd_lut<12>
+                                                       Madd_add_temp_12_Madd_cy<12>
+                                                       Madd_add_temp_12_Madd_xor<13>
+    SLICE_X46Y46.G2      net (fanout=1)        0.967   add_temp_12<13>
+    SLICE_X46Y46.COUT    Topcyg                1.096   add_temp_13<12>
+                                                       Madd_add_temp_13_Madd_lut<13>
+                                                       Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.CIN     net (fanout=1)        0.000   Madd_add_temp_13_Madd_cy<13>
+    SLICE_X46Y47.X       Tcinx                 0.904   add_temp_13<14>
+                                                       Madd_add_temp_13_Madd_xor<14>
+    SLICE_X47Y47.F1      net (fanout=1)        0.552   add_temp_13<14>
+    SLICE_X47Y47.X       Topx                  0.966   add_temp_14<14>
+                                                       Madd_add_temp_14_Madd_lut<14>
+                                                       Madd_add_temp_14_Madd_xor<14>
+    SLICE_X49Y47.G1      net (fanout=1)        0.681   add_temp_14<14>
+    SLICE_X49Y47.Y       Topgy                 1.173   add_temp_15<13>
+                                                       Madd_add_temp_15_Madd_lut<14>
+                                                       Madd_add_temp_15_Madd_xor<14>
+    SLICE_X50Y48.G1      net (fanout=1)        1.257   add_temp_15<14>
+    SLICE_X50Y48.COUT    Topcyg                1.096   add_temp_16<13>
+                                                       Madd_add_temp_16_Madd_lut<14>
+                                                       Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.CIN     net (fanout=1)        0.000   Madd_add_temp_16_Madd_cy<14>
+    SLICE_X50Y49.X       Tcinx                 0.904   add_temp_16<15>
+                                                       Madd_add_temp_16_Madd_xor<15>
+    SLICE_X52Y50.F2      net (fanout=1)        1.422   add_temp_16<15>
+    SLICE_X52Y50.COUT    Topcyf                1.084   add_temp_17<15>
+                                                       Madd_add_temp_17_Madd_Madd_lut<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<15>
+                                                       Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.CIN     net (fanout=1)        0.000   Madd_add_temp_17_Madd_Madd_cy<16>
+    SLICE_X52Y51.X       Tcinx                 0.904   add_temp_17<17>
+                                                       Madd_add_temp_17_Madd_Madd_xor<17>
+    SLICE_X55Y52.G1      net (fanout=1)        1.016   add_temp_17<17>
+    SLICE_X55Y52.COUT    Topcyg                1.039   add_temp_18<16>
+                                                       Madd_add_temp_18_Madd_Madd_lut<17>
+                                                       Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.CIN     net (fanout=1)        0.000   Madd_add_temp_18_Madd_Madd_cy<17>
+    SLICE_X55Y53.X       Tcinx                 0.904   add_temp_18<18>
+                                                       Madd_add_temp_18_Madd_Madd_xor<18>
+    SLICE_X53Y55.F1      net (fanout=1)        0.936   add_temp_18<18>
+    SLICE_X53Y55.Y       Topy                  1.605   add_temp_19<18>
+                                                       Madd_add_temp_19_Madd_lut<18>
+                                                       Madd_add_temp_19_Madd_cy<18>
+                                                       Madd_add_temp_19_Madd_xor<19>
+    SLICE_X54Y57.G1      net (fanout=1)        1.211   add_temp_19<19>
+    SLICE_X54Y57.COUT    Topcyg                1.096   output_register<9>
+                                                       add_temp_19<19>_rt
+                                                       Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CIN     net (fanout=1)        0.000   Madd_output_typeconvert_add0000_cy<19>
+    SLICE_X54Y58.CLK     Tcinck                0.986   output_register<11>
+                                                       Madd_output_typeconvert_add0000_xor<20>
+                                                       output_register_11
+    -------------------------------------------------  ---------------------------
+    Total                                     62.263ns (38.262ns logic, 24.001ns route)
+                                                       (61.5% logic, 38.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point delay_pipeline_4_1 (SLICE_X11Y48.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.780ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               delay_pipeline_3_1 (FF)
+  Destination:          delay_pipeline_4_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.800ns (Levels of Logic = 0)
+  Clock Path Skew:      0.020ns (0.315 - 0.295)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: delay_pipeline_3_1 to delay_pipeline_4_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y47.XQ      Tcko                  0.576   delay_pipeline_3_1
+                                                       delay_pipeline_3_1
+    SLICE_X11Y48.BX      net (fanout=2)        0.507   delay_pipeline_3_1
+    SLICE_X11Y48.CLK     Tckdi       (-Th)     0.283   delay_pipeline_4_1
+                                                       delay_pipeline_4_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.800ns (0.293ns logic, 0.507ns route)
+                                                       (36.6% logic, 63.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point delay_pipeline_19_13 (SLICE_X51Y57.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.798ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               delay_pipeline_18_13 (FF)
+  Destination:          delay_pipeline_19_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.798ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: delay_pipeline_18_13 to delay_pipeline_19_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y55.XQ      Tcko                  0.576   delay_pipeline_18_13
+                                                       delay_pipeline_18_13
+    SLICE_X51Y57.BX      net (fanout=8)        0.505   delay_pipeline_18_13
+    SLICE_X51Y57.CLK     Tckdi       (-Th)     0.283   delay_pipeline_19_13
+                                                       delay_pipeline_19_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.798ns (0.293ns logic, 0.505ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point delay_pipeline_4_5 (SLICE_X11Y50.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.799ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               delay_pipeline_3_5 (FF)
+  Destination:          delay_pipeline_4_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.798ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.001ns (0.000 - 0.001)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: delay_pipeline_3_5 to delay_pipeline_4_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y49.XQ      Tcko                  0.576   delay_pipeline_3_5
+                                                       delay_pipeline_3_5
+    SLICE_X11Y50.BX      net (fanout=2)        0.505   delay_pipeline_3_5
+    SLICE_X11Y50.CLK     Tckdi       (-Th)     0.283   delay_pipeline_4_5
+                                                       delay_pipeline_4_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.798ns (0.293ns logic, 0.505ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.428ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.786ns (Tcl)
+  Physical resource: delay_pipeline_0_3/CLK
+  Logical resource: delay_pipeline_0_3/CK
+  Location pin: SLICE_X2Y8.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.428ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.786ns (Tch)
+  Physical resource: delay_pipeline_0_3/CLK
+  Logical resource: delay_pipeline_0_3/CK
+  Location pin: SLICE_X2Y8.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.428ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.786ns (Tcl)
+  Physical resource: delay_pipeline_0_3/CLK
+  Logical resource: delay_pipeline_0_2/CK
+  Location pin: SLICE_X2Y8.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   62.393|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 36  Score: 1734872  (Setup/Max: 1734872, Hold: 0)
+
+Constraints cover 6622209029756681 paths, 0 nets, and 1884 connections
+
+Design statistics:
+   Minimum period:  62.393ns{1}   (Maximum frequency:  16.027MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Jun 23 12:38:46 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4509 MB
+
+
+
