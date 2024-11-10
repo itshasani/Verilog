@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cordic_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module unrolled_sub
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb1_sub
