@@ -1,2 +1,3 @@
-VLSI/**/Vivado/**/*
-!VLSI/**/Vivado/**/*.jou
+VLSI/**/Vivado/*
+
+!VLS!VLSI/**/Vivado/*.jou
