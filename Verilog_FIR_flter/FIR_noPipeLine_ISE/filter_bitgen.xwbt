@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\SHR\OneDrive\Documents\Verilog\FIR_noPipeLine_ISE\filter.ncd
+OUTFILE=C:\Users\SHR\OneDrive\Documents\Verilog\FIR_noPipeLine_ISE\filter.bit
+FAMILY=Spartan3
+PART=xc3s400-4pq208
+WORKINGDIR=C:\Users\SHR\OneDrive\Documents\Verilog\FIR_noPipeLine_ISE
+LICENSE=WebPack
+USER_INFO=__0_0_0

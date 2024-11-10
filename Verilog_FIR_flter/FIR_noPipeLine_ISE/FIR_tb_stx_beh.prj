@@ -1,0 +1,3 @@
+verilog isim_temp "d.v"
+verilog isim_temp "Filte.v"
+verilog isim_temp "I:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

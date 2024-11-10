@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/FIR_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="FIR_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/FIR_tb/filter_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">filter_out[13:0]</obj_property>
+      <obj_property name="ObjectShortName">filter_out[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/clk_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_enable</obj_property>
+      <obj_property name="ObjectShortName">clk_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/filter_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">filter_in[13:0]</obj_property>
+      <obj_property name="ObjectShortName">filter_in[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/step_input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">step_input[13:0]</obj_property>
+      <obj_property name="ObjectShortName">step_input[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/file_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">file_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">file_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIR_tb/i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

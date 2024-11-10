@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml filter.twx filter.ncd -o filter.twr filter.pcf 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml filter.twx filter.ncd -o filter.twr filter.pcf 
+bitgen -intstyle ise -f filter.ut filter.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml filter.twx filter.ncd -o filter.twr filter.pcf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc E:/Log_Circuit/Log2/FIR/20_FIR_Filter_Direct_Form/FIR_Direct_Form_VHDL/FIR_UCF.ucf -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc E:/Log_Circuit/Log2/FIR/20_FIR_Filter_Direct_Form/FIR_Direct_Form_VHDL/FIR_UCF.ucf -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc E:/Log_Circuit/Log2/FIR/20_FIR_Filter_Direct_Form/FIR_Direct_Form_VHDL/FIR_UCF.ucf -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+xst -intstyle ise -ifn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.xst" -ofn "C:/Users/SHR/OneDrive/Documents/Verilog/FIR_noPipeLine_ISE/filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc XDC1.ucf -p xc3s400-pq208-4 filter.ngc filter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o filter_map.ncd filter.ngd filter.pcf 
+par -w -intstyle ise -ol high -t 1 filter_map.ncd filter.ncd filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml filter.twx filter.ncd -o filter.twr filter.pcf -ucf XDC1.ucf 
+bitgen -intstyle ise -f filter.ut filter.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim filter.ngc filter_synthesis.v 

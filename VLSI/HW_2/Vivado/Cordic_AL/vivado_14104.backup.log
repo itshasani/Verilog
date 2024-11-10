@@ -1,0 +1,506 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov  5 09:12:29 2024
+# Process ID: 14104
+# Current directory: E:/VLSI/HW2/Vivado/Cordic_AL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13976 E:\VLSI\HW2\Vivado\Cordic_AL\Cordic_AL.xpr
+# Log file: E:/VLSI/HW2/Vivado/Cordic_AL/vivado.log
+# Journal file: E:/VLSI/HW2/Vivado/Cordic_AL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 847.445 ; gain = 124.824
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 70. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 71. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 79. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 80. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb1_sub_behav -key {Behavioral:sim_1:Functional:tb1_sub} -tclbatch {tb1_sub.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb1_sub.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 896.488 ; gain = 19.848
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb1_sub_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 896.488 ; gain = 19.848
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb1_sub/UUT0/chain_x}} {{/tb1_sub/UUT0/chain_y}} {{/tb1_sub/UUT0/chain_z}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 944.176 ; gain = 30.105
+relaunch_xsim_kernel: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 944.176 ; gain = 30.316
+relaunch_sim: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 944.176 ; gain = 30.316
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 67. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 68. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 76. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 958.094 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 67. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 68. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 76. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 965.918 ; gain = 0.000
+run 10 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 67. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 68. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 76. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 965.918 ; gain = 0.000
+relaunch_xsim_kernel: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 965.918 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 965.918 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 70. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 71. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 79. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 80. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 973.914 ; gain = 7.902
+relaunch_xsim_kernel: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 973.914 ; gain = 7.902
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 973.914 ; gain = 7.902
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 981.430 ; gain = 7.516
+relaunch_xsim_kernel: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 981.430 ; gain = 7.516
+relaunch_sim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 981.430 ; gain = 7.516
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 70. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 71. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 79. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 80. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 997.586 ; gain = 0.000
+relaunch_xsim_kernel: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 997.586 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 997.586 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 68. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 69. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 78. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1010.953 ; gain = 5.922
+relaunch_xsim_kernel: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1010.953 ; gain = 5.922
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1010.953 ; gain = 5.922
+run 10 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb1_sub' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb1_sub_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/cordic_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Source/unrolled_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module unrolled_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/VLSI/HW2/Simulation/tb1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_sub
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9798746011bb40e5a1a81e94320f7bfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb1_sub_behav xil_defaultlib.tb1_sub xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.unrolled_sub(atan2i=201,shift_nu...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=119)
+Compiling module xil_defaultlib.unrolled_sub(atan2i=63,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=32,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=16,shift_num...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=8,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=4,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=2,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=1,shift_num=...
+Compiling module xil_defaultlib.unrolled_sub(atan2i=0,shift_num=...
+Compiling module xil_defaultlib.cordic_top(iteration=10)
+Compiling module xil_defaultlib.tb1_sub
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 68. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 69. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "E:/VLSI/HW2/Simulation/tb1_sub.v" Line 78. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb1_sub_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1013.094 ; gain = 1.578
+relaunch_xsim_kernel: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1013.094 ; gain = 1.578
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1013.094 ; gain = 1.578
+run 5 ms

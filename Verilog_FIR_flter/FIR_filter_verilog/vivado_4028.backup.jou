@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Jun 23 11:55:08 2024
+# Process ID: 4028
+# Current directory: C:/Users/SHR/OneDrive/Desktop/FIR_BandStop/FIR_BandStop/FIR_filter_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11368 C:\Users\SHR\OneDrive\Desktop\FIR_BandStop\FIR_BandStop\FIR_filter_verilog\FIR_filter_verilog.xpr
+# Log file: C:/Users/SHR/OneDrive/Desktop/FIR_BandStop/FIR_BandStop/FIR_filter_verilog/vivado.log
+# Journal file: C:/Users/SHR/OneDrive/Desktop/FIR_BandStop/FIR_BandStop/FIR_filter_verilog\vivado.jou
+# Running On: DESKTOP-66KU93O, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8403 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/SHR/OneDrive/Desktop/FIR_BandStop/FIR_BandStop/FIR_filter_verilog/FIR_filter_verilog.xpr
+update_compile_order -fileset sources_1

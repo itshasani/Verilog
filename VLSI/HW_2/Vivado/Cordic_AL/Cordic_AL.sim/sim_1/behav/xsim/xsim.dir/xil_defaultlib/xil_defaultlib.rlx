@@ -1,0 +1,8 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+E:/VLSI/HW2/Simulation/tb1_sub.v,1730845364,verilog,,,,tb1_sub,,,,,,,,
+E:/VLSI/HW2/Source/cordic_top.v,1730848025,verilog,,E:/VLSI/HW2/Source/unrolled_sub.v,,cordic_top,,,,,,,,
+E:/VLSI/HW2/Source/unrolled_sub.v,1730843026,verilog,,E:/VLSI/HW2/Simulation/tb1_sub.v,,unrolled_sub,,,,,,,,
+E:/VLSI/HW2/Vivado/Cordic_AL/Cordic_AL.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
