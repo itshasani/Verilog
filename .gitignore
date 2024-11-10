@@ -1,3 +1,4 @@
-VLSI/**/Vivado
-!/VLSI/**/Vivado/**/Vivado/**/vivado.jou
-!/VLSI/**/Vivado/**/Vivado/**/test.txt
+VLSI/**/Vivado/*
+!VLSI/**/Vivado/**/vivado.jou
+
+!VLSI/**/Vivado/**/test.txt
