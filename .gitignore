@@ -1,2 +1,2 @@
-VLSI/HW_2/Vivado/
-
+VLSI/**/Vivado/**/*
+!VLSI/**/Vivado/**/*.jou
